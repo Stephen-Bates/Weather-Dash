@@ -52,8 +52,6 @@ $(function () {
     }
 
     function updateWeather(data) {
-        console.log(data);
-        console.log(data.weather[0].icon);
         $('#daily-forecast').find('#name').text(data.name).end()
             .find('.date').text(new Date().toISOString().slice(0, 10)).end()
             .find('.icon').attr('src', `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`).end()
