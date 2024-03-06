@@ -83,7 +83,7 @@ $(function () {
 
     // Function to query openWeather for current weather data at a location
     function weatherLookup(data, callback) {
-        fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${data.lat}&lon=${data.lon}&appid=${apiKey}&units=imperial`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${data.lat}&lon=${data.lon}&appid=${apiKey}&units=imperial`)
             .then(function (response) {
                 return response.json();
             })
@@ -94,7 +94,7 @@ $(function () {
 
     // Function to query openWeather for weather forecast data at a location
     function forecastLookup(data, callback) {
-        fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${data.lat}&lon=${data.lon}&appid=${apiKey}&units=imperial`)
+        fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${data.lat}&lon=${data.lon}&appid=${apiKey}&units=imperial`)
             .then(function (response) {
                 return response.json();
             })
@@ -105,7 +105,7 @@ $(function () {
 
     // Function to query openWeather geocoder api for locations data of a city
     function locationLookup(location, callback) {
-        fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=5&appid=${apiKey}`)
+        fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=5&appid=${apiKey}`)
             .then(function (response) {
                 return response.json();
             })
